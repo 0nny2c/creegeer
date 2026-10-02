@@ -1,0 +1,2477 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+</head>
+<body>
+<style>
+    html, body{padding: 0; margin: 0;}
+    * {box-sizing: border-box;}
+    #cclog_ccf .ccl_inWrap {font-size: 15px; letter-spacing: -.5px; color: #ffffff;}
+
+    #cclog_ccf .ccl_inWrap .ccl_tab {width: 100%; background: #27262C; position: relative;}
+    #cclog_ccf .ccl_inWrap .ccl_tab.ccl_main:before {background: none;}
+    #cclog_ccf .ccl_inWrap .ccl_tab.ccl_main{background: #1f1e22;}
+    #cclog_ccf .ccl_inWrap .ccl_tabtitle {margin: 0; color: #bcbcc1; background: #474952; position: absolute; top: 10px; right: 10px; border-radius: 5px; padding: 5px; font-weight: 200}
+
+    #cclog_ccf .ccl_inWrap .ccl_player {display: flex; overflow: hidden; padding: 20px 0px 20px 20px; border-bottom: 1px solid rgba(255,255,255,0.08)}
+    #cclog_ccf .ccl_inWrap .ccl_infoWrap .ccl_imgWrap {overflow: hidden; width: 40px; height: 40px; background-color: rgba(0, 0, 0, 0.31); float: left; border-radius: 5px; }
+    #cclog_ccf .ccl_inWrap .ccl_infoWrap .ccl_imgWrap img {width: 40px; height: auto;}
+    #cclog_ccf .ccl_inWrap .ccl_infoWrap .ccl_imgWrap:not(:has(img)) {opacity: 0;}
+    #cclog_ccf .ccl_inWrap .ccl_textWrap {float: left; line-height: 1.6; margin-left: 20px; margin-right: 20px;}
+    #cclog_ccf .ccl_inWrap .ccl_textWrap .ccl_Uname {margin: 0; font-weight: 800;}
+    #cclog_ccf .ccl_inWrap .ccl_textWrap .ccl_Utext {margin: 0; font-weight: 400; color: #59595D}
+    #cclog_ccf .ccl_inWrap .ccl_tab.ccl_main .ccl_textWrap .ccl_Utext {color: #ffffff;}
+
+    #cclog_ccf .ccl_inWrap .ccl_player.system {padding: 0px; border-color: #313033 !important; background: #33313b; text-align: center; justify-content: center}
+    #cclog_ccf .ccl_inWrap .ccl_player.system .ccl_infoWrap {display: none;}
+    #cclog_ccf .ccl_inWrap .ccl_player.system .ccl_textWrap {margin-left: 0; padding: 10px 20px}
+    #cclog_ccf .ccl_inWrap .ccl_player.system .ccl_textWrap .ccl_Uname {color: #858296; font-size:0.86em; letter-spacing: 1px; padding: 3px 8px; border-radius: 15px; background: #000000}
+    #cclog_ccf .ccl_inWrap .ccl_player.system .ccl_textWrap .ccl_Utext {margin-top: 5px; color: #908e9a; letter-spacing: -1px}
+
+    #cclog_ccf .ccl_inWrap .ccl_main .ccl_player.narrator {padding: 0px; text-align: center; justify-content: center;}
+    #cclog_ccf .ccl_inWrap .ccl_main .ccl_player.narrator .ccl_infoWrap {display: none;}
+    #cclog_ccf .ccl_inWrap .ccl_main .ccl_player.narrator .ccl_textWrap {margin-left: 0; padding: 10px 20px}
+    #cclog_ccf .ccl_inWrap .ccl_main .ccl_player.narrator .ccl_textWrap .ccl_Uname {display: none;}
+    #cclog_ccf .ccl_inWrap .ccl_main .ccl_player.narrator .ccl_textWrap .ccl_Utext {margin-top: 5px; letter-spacing: -1px}
+
+</style>
+<div class="cclog_wrap" id="cclog_ccf">
+    <div class="ccl_inWrap">
+        <div class="ccl_tab ccl_main">
+            <p class="ccl_tabtitle">메인</p>
+            <div class="ccl_player p001">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #f44336">✦</p>
+                    <p class="ccl_Utext">영광의 자화상</p>
+                </div>
+            </div>
+            <div class="ccl_player p012">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #f44336">CAST</p>
+                    <p class="ccl_Utext">아키 토코시에<br>츠유사키 아이카</p>
+                </div>
+            </div>
+            <div class="ccl_player p014">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #f44336">DATE</p>
+                    <p class="ccl_Utext">2026. 09. 29</p>
+                </div>
+            </div>
+            <div class="ccl_player p000">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0"> </p>
+                    <p class="ccl_Utext">나는 마지막으로 당신에게 모든 영광을 돌려줄 거야.<br></p>
+                </div>
+            </div>
+            <div class="ccl_player p003">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #f44336">01</p>
+                    <p class="ccl_Utext">Before sunrise</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">뉴욕 시내, LP바 &#39;락 오브 서니데이&#39;의 구석진 테이블석.</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">아니, 그러니까 내 말 좀 들어 봐⋯⋯.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">데이비드가 손을 붕붕 휘저어가며 열심히 설명합니다.<br>&#39;영광의 자화상&#39;. 할리우드의 촉망받는 이 젊은 감독이 차기작으로 오랫동안 입을 털었던 영화.<br>주인공은 둘, 화가와 그의 연인.<br>그중 하나는 아이카입니다.<br>한참을 떠벌거리던 데이비드는 자랑스러운 목소리로 가슴을 펼칩니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">내가 너를 왜 아마벨로 캐스팅했는지는 하루 종일 설명해도 모자라.<br>세상에, 오디션을 몇 번이나 봤는데 도저히 마음에 드는 배우가 없었다고!</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">그럼요, 아주 잘 알죠.<br>이제는 중견 배우로서 탄탄한 경력을 완성한 아이카.<br>다음 단계로 나아가기 위한 중요한 기점인 지금, 3개월 전 데이비드가 아이카를 차기작의 주연으로 캐스팅했습니다.<br>아이카의 연기 스타일과 이미지, 마스크가 줄곧 생각해왔던 아마벨과 완벽히 일치한다고 했었죠.<br>데이비드 윈저. 성격은 좋게 말해야 꽤나 점잖지 않은 수준이지만, 영화감독으로서의 역량은 할리우드에서도 다섯 손가락 안에 꼽히는 사람.<br>각본부터 배우 캐스팅, 촬영, 편집, 홍보까지 전 과정에 반드시 간섭하는 만큼 그의 작품들은 하나같이 경악에 가까운 개성과 미장센을 갖춘 완성도를 자랑합니다.<br>어찌나 까다로운지, 같이 일하는 스태프마다 그의 철저한 완벽주의에 혀를 내두른다고 합니다.<br>그만큼 평론가와 비평가들의 인정과 대중의 열렬한 인기를 구가하고 있는 현세대 최고의 감독 중 하나죠.<br>그런 그의 확신 넘치는 칭찬이라니! 솔직히 기쁩니다.<br>이렇게 단둘이 LP바에서 수다를 떨 정도로 친해졌으니, 우리가 감독과 배우 이상으로 서로를 이해하고 신뢰하는 친구임은 분명합니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">하여간, 다시 말하지만 잘 부탁해. 근 몇 년 중에서 가장 심혈을 기울여 촬영할 작품이니까.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">잘 부탁한다는 말만 오늘 만난 이후로 정확히 네 번째입니다.<br>아직 촬영이 시작된 것도 아닌데 호들갑이 심한 것 같지만, 데이비드의 눈빛은 한 치의 거짓도 없이 빛나고 있습니다.<br>술 한 잔 없이 이렇게 열정적일 수가 있다니.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">그 말만 오늘 네 번째 하시는데요&#183;&#183;&#183;. (싫은 건 아니긴 한데, 곁눈질로 한 번 굴린다.)<br>그보다, 상대 역은 누군데요? 주인공은 둘이라고 하셨잖아요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">⋯⋯오, 아. 그거.<br>너니까 솔직히 말할게.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">왜 이렇게 비장한 건데? 솔직하게 말한다면서 뜸은 또 왜 들여?<br>설마 아직 캐스팅을 못한 건가?<br>갑자기 모든 자신감을 상실하고 지쳐버린 듯한 데이비드가 테이블 위에 늘어져 있던 손으로 주먹을 꽉 쥡니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">⋯⋯오스카 역은 아키 토코시에여야만 해. 그 사람이 아니면 안 돼!</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;. (고개가 모로 기운다.)<br>그럼 캐스팅 하면 되는 일 아니에요?<br>아니면 뭐어&#183;&#183;&#183; 이미 거절이라도 당하셨나? (솔직하게 말한다고 했으니까?)</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">윽. (아픈 구석을 찔린 듯 움츠러든다.)<br>그래⋯⋯, 아직 캐스팅을 못 했어.<br>너도 알잖아! 그 사람, 벌써 10년째 연기 활동은커녕 공개적인 자리라면 코빼기도 비치질 않고 있어.<br>가뭄에 콩 나듯 한 장짜리 화보 찍고 봉사 활동은 여기저기 다니는 것 같은데, 내가 아무리 찾아가서 제발 우리 영화 좀 출연해 달라고 빌어도 무서울 정도로 단호하게 안 된다고만 해.<br>만나는 것 자체는 어렵지 않았어. 그런데 연기니 영화니, 그런 이야기만 나오면 귀신 같이 입을 다물거나 화제를 바꿔버리더라. 이제 내 얼굴도 안 봐줄까 봐 연락 못한 지 한참이야.<br>아니, 아키 씨가 아니면 차라리 오스카 역을 없애는 게 나아. 진심이야!<br>네가 뭐, 단독 주연을 못할 인재도 아닌데. 내가 이 영화를 처음 구상할 때 가장 먼저 떠올린 게 아키 씨였다니까.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">한참을 흥분에 휩싸여 토코시에의 캐스팅에 대해 일장연설을 늘어놓던 데이비드.<br>그가 근심 섞인 한숨을 깊이 내쉬며 이마를 짚더니, 시선만 겨우 들어 아이카에게 묻습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">아, 그러고 보니 너는 그 사람 팬이라고 하지 않았나?</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(고갤 끄덕인다.) 예, 그랬죠&#183;&#183;&#183;?<br>(안 좋아할 이유가 있나&#183;&#183;&#183;? 문무겸비에 잘생겼고, 연기 잘하고, 배우 지망생이면 누구나 다 알고&#183;&#183;&#183; 그리 혼자 골똘히 고민하다 말고 데이비드 본다.)<br>&#183;&#183;&#183;&#183;&#183;&#183;.<br>근데, 불안하게 그걸 왜 묻지&#183;&#183;&#183;?</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">(예상대로다. 눈을 빛낸다⋯.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(시선 피한다.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">(나는 추격형이다.) 네가 아키 씨한테 한 번 가 볼래?<br>사실 엊그제에 내가 마지막으로 한 번만 더 기회를 달라고 했거든.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;.<br>할리우드 내에서 손 꼽히는 감독도 설득 못 한 걸 일개 배우인 제가 어떻게 해요! (버럭!)<br>못 해, 못 해! 할 수 있을 리 없잖아!</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">아니, 왜? 혹시 모르잖아. 후배 배우가 팬이라고 설득하면 그 사람도 마음이 바뀔지!<br>그리고 그 김에 겸사겸사 동경하는 선배 얼굴도 보고, 그러는 거지. 응?</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">퍽이나 설득 당해주겠다!<br>그냥 치기 어린 후배가 상대역 좀 해달라고 빌러 온 거 외에 뭐가 되겠냐고&#183;&#183;&#183;!<br>&#183;&#183;&#183;&#183;&#183;&#183;데이비드 씨가 저랑 같이 가는 건요? 두, 둘이 같이 가는 건 안 되는 거예요?<br>(약속 있다고 하면 죽는다.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">(아~.)<br>사실 나는 선약이.<br>(머리 긁는다.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;.<br>(진정하자, 사람 패면 징역이다.)<br>&#183;&#183;&#183;&#183;&#183;&#183;그냥 가서 같이 출연해줬으면 한다, 다시 연기를 해 볼 생각은 없느냐, 그거만 물으면 되는 거에요?<br>나까지 실패하면 진짜 포기하는 거고?</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">⋯⋯으으음. (앓는 소리를 내는 것이, 누가 봐도 거절당할 경우의 일은 생각하지 않은 사람이다.)<br>일단 해보고 생각할까! 어때?</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(누가 봐도 거절당할 경우의 일은 생각도 안 한 사람이네.)<br>너무 즉흥적인 거 아니냐고&#183;&#183;&#183;&#183;&#183;&#183;.<br>(끄응, 앓는 소리 한 번 내곤 한숨 푹 내쉰다.) 최선은 다해 볼 건데요, 실패했다고 제 탓하시면 안 돼요&#183;&#183;&#183;&#183;&#183;&#183;.</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">에이, 내가 그럴 사람으로 보여?<br>(씩 웃으며 덧붙인다.) 내로라 하는 연예계 인사들도 10년간 설득에 실패한 사람인걸. 나조차 그랬는데, 어떻게 네가 바람 맞아 온다고 비난을 할까.<br>자리는 무조건 만들어 줄 테니까.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(그러니까, 내로라하는 연예계 인사들도 실패한 걸 나 같은 애가 설득할 수 있겠냐고. 마음 같아선 모순이라고 다 집어주고 싶지만, 꾹 참는다. 실패하면 제 영화도 날아가는 꼴이니&#183;&#183;&#183;.)<br>(그리고 솔직히 실물 구경 한 번은 해보고 싶기도 했고. 뜨음.)<br>그럼 자리 만들어지면 연락 주세요. 한 번 노력은 해볼 테니까.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">데이비드가 아이카의 어깨를 두드리며 조만간 연락하겠다고 대답합니다.<br>언제나 스크린 또는 화면으로만 보던 토코시에를 직접 만나는 거예요!<br>그를 설득해서 함께 영화를 찍을 수만 있다면, 얼마나 좋을까.<br>⋯⋯그리고 지금. 그러니까 데이비드의 제안을 받아들인지 사흘째 아침, 토코시에의 아파트 복도.<br>아이카는 1시간째 열리지 않는 문 앞에 서 있습니다.<br>분명 데이비드가 토코시에에게 연락을 했다고 했는데, 이게 어떻게 된 일이죠?<br>물론 그를 믿지 못하는 건 아니지만⋯⋯.<br>데이비드와는 투자사 미팅 때문에 10분 전부터 문자도 전화도 불가능해졌습니다.<br>결국 아이카 혼자 덩그러니, 혹은 안절부절 자리를 지키고 있는 상황.<br>스토커로 오해받기라도 하는 건 아닌지 진심으로 불안해집니다.<br>⋯⋯진짜 마지막으로, 한 번만 더 불러볼까요?<br>혹시 모르잖아요. 토코시에가 약속을 깜빡하고 잠들어 있는 걸지도.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;. (겨울도 아닌데 손이 차네. 주머니에서 장갑 꺼내서 착용한다&#183;&#183;&#183;)<br>(&#183;&#183;&#183;그냥 가? 아무리 그래도 사람이 밖에서 한 시간째 기척을 내고 있으면 깨지 않나? 이정도면 만나기 싫어서 일부러 문전박대 하는 거 아니야?)<br>(문 앞에서 10분 정도 종종종&#183;&#183;&#183; 왔다갔다 하다가&#183;&#183;&#183;)<br>(진짜 마지막으로! 초인종 눌러본다.) &#183;&#183;&#183;저, 저기. 혹시 만나기 싫으신 거라면 가라고 대답이라도 해주시면 안 될까요&#183;&#183;&#183;.<br>그럼 얌전히 갈게요&#183;&#183;&#183;. (기어들어 간다.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">그때 안쪽에서 부스럭거리는 소리와 함께 인기척이 느껴집니다.<br>터벅, 터벅, 철컥.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯아, 죄송합니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">스르륵 열린 문 사이로 조심스럽게 고개를 내미는 사람.<br>완벽하게 세팅된 모습으로 카메라에 잡히던 모습과는 거리가 멀지만, 아이카는 첫눈에 알아볼 수 있었습니다.<br>분명 토코시에입니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">제가 늦게 잠드는 바람에 이제 일어나서⋯⋯.<br>그쪽이, 츠유사키 씨?</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;.<br>(무의식적으로 멍~하니.) 잘생겼네&#183;&#183;&#183;&#183;&#183;&#183;.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯네?</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;아? 저 혹시 방금 말로 했나요?</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯음.<br>⋯⋯감사해요. (인사로 답을 대신한다.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;.<br>&#183;&#183;&#183;&#183;&#183;&#183;!! (그제야 제 입이 방정이란 사실을 깨닫는다.)<br>아니, 그, 그게! 이런 말 하려고 온 게 아닌데! 그렇다고 안 잘생기셨다는 건 아니고&#183;&#183;&#183;!</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯. (조용히 키득거렸다.)<br>만나서 반가워요. 윈저 감독님께는 연락 받았어요.<br>일부러 기다리게 하려던 건 아닌데⋯⋯, 아시다시피 제가 요즘은 거의 집에서만 지내서. 죄송해요.<br>⋯⋯음, 손님 맞을 준비도 덜 됐고, 잘생겼다는 칭찬 듣기도 부끄러울 만큼 집이 두더지굴이라.<br>몇 분만 더 기다려 주실래요? 금방 다시 나올 테니까.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">아, 아니에요. 오래 안 기다렸어요. (일단 예의상 말은 그리 한다. 손 뒤로 하여금 장갑 낀 거도 악착같이 숨겼다.)<br>조금 더 기다린다고 문제될 거 없으니까, 천천히&#183;&#183;&#183;!<br>&#183;&#183;&#183;막 반나절을 여기 세워두시는 거만 아니라면 괜찮으니까아&#183;&#183;&#183;.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯아, 설마요. 간만의 손님을 제가 어떻게.<br>그럼, 잠시만요⋯.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">토코시에는 감사하다며 짧게 웃고는 문을 닫습니다.<br>왜인지 분주해진 발소리를 들으며, 아이카는 뒤늦게 밀려오는 떨림을 가라앉히려 심호흡을 하고, 초조하게 아파트 복도를 서성이고, 토코시에의 실물을 떠올리며 내적 환호도 질러봅니다.<br>함께 이야기를 나누게 되면 뭐라고 말해야 할까요?<br>오랫동안 당신의 팬이었어요, 당신 때문에 연기를 시작했어요, 연기는 다시 해주면 안 될까요⋯⋯.<br>어쨌든 결론은 하나의 의지로 수렴합니다.<br>이 기회를 놓치지 않을 거라고!</p>
+                </div>
+            </div>
+            <div class="ccl_player p004">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #f44336">02</p>
+                    <p class="ccl_Utext">Sunday morning</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">토코시에의 집은 한때 최고의 인기를 누렸던 대스타의 자택이라고는 믿을 수 없을 만큼 조촐합니다.<br>방 두 개, 화장실은 하나. 작은 거실과 더 비좁은 부엌.<br>두더지굴 같다더니 금방 들여보내 준 것치고는 깨끗한걸요.<br>토코시에는 거실과 부엌 사이에 위치한 식탁으로 아이카를 안내합니다.<br>각자 머그잔을 하나씩 두고 마주 앉은 두 사람.<br>적당한 크기의 창문으로 이제 막 뜨기 시작한 햇빛이 스며들어오고 있습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯아, 신인 때 계약금으로 산 집이에요.<br>정이 들기도 했고, 10년 전에 이사를 가려다가 활동을 그만두면서⋯ 그냥 계속 살고 있어요. 조금 누추하죠⋯.<br>⋯⋯해서, 오늘 만나자고 하신 이유는?</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(머그잔 만지작&#183;&#183;&#183;) 음.<br>빙 돌려서 말하는 편이 좋으세요? 아니면 직설적으로 본론만?</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯음.<br>간만에 후배 배우를 만난 거라서 반갑고, 이것저것 묻고 싶은 마음이 굴뚝 같지만⋯.<br>우선은 본론부터 들어볼까요. 츠유사키 씨 시간도 귀중하니까.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">흐음, 쫓아내고 싶으신 건 아니라 믿고&#183;&#183;&#183;. (잠깐 천장 한 번 봤다. 다시 고개 내린다.)<br>(그리곤 꼿꼿하게 상대 본다. 연신 슴벅이길.) 저랑 영화 하나 찍으시죠?</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯아.<br>⋯⋯일단 제안은 감사해요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">토코시에는 시선을 피하며 상당히 씁쓸한 미소를 짓습니다.<br>머그잔 손잡이를 만지작거리는 그의 얼굴은 어쩐지 착잡해 보입니다.<br>예상했어요, 10년이나 세상을 등진 채 지내온 사람을 고작 몇 마디 말로 설득할 수 있을 거라고는 생각하지 않았습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">다만 윈저 감독님께도 이미 말씀드린 바 있듯이, 저는 이제 배우가 아니에요.<br>앞으로도 연기는 하지 않을 거고요⋯⋯.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(여전히 슴벅이고 있다. 이런 걸로 굴했다고 하면 데이비드 씨 볼 면목이 없다.)<br>연기를 하지 않을 거라 결심하게 된 계기라도 있으신 거예요?<br>전 아키 씨 연기 되게 좋아했는데.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">개인 사정으로⋯⋯.<br>⋯츠유사키 씨가 나쁜 사람이라고 생각하는 건 아니에요. 하지만 정말로 개인적인 이유라서, 말씀드리기가 조금.<br>⋯⋯좋아해 주셔서 감사해요. (주홍색 눈동자가 희미하게 반짝였던 것도 같다.)<br>그만둔 지 10년이나 지났는데도 기억해 주시고.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">개인적인 이유라아&#183;&#183;&#183;.<br>(건강이나 가정사 같은 거려나. 남한테 말 못 할 사유라면 그런 거 외엔 대개&#183;&#183;&#183;)<br>뭐, 그렇게 말씀하시면 제가 달리 드릴 수 있는 말은 없긴 한데요.<br>솔직히 아쉽긴 하네요. 저는 아키 씨 덕분에 연기를 시작했다고 봐도 무방한 사람이라서.<br>존경해 마지 않는 배우가 꿈을 꺾는다는 걸 듣고 그렇구나, 하고 넘기기도 애매하고&#183;&#183;&#183; 생전에 한 번 만나봤다고 기뻐하기만 할 수도 없네&#183;&#183;&#183;.<br>난 진짜 좋아하는데. 그렇기에 더더욱. (주어는 없다.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">(바라보는 시선에 기묘한 애틋함이 깃든다. 스크린으로 돌아가고자 하는 본능을 품고 사는 생물이란 으레 그런 법이다.)<br>제 덕분에 훌륭한 배우가 하나 더 시대에 출현했다면 더할 나위 없겠군요⋯.<br>저도 좋아해요.<br>대신이라기엔 뭣하지만, 츠유사키 씨 이야기 좀 더 해주시겠어요? 저희 집에는 TV도 없고, 제가 신문이나 잡지를 구독하는 것도 아니어서.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">그렇게 말하며 거실 쪽을 쳐다보는 토코시에를 따라 고개를 돌리면, 대개 TV가 걸려 있을 거실의 벽면이 휑합니다.<br>그 대신 풍경화 액자와 책 몇 권 올려진 거실장이 있군요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;저는 팬이니까 그러려니 하는데, 아키 씨는 주어 좀 붙이실래요. 연기라고&#183;&#183;&#183;.<br>(아직 그리 유명한 것도 아니고, 간신히 중견 쯔음에 자리 잡은 거 뿐이다. 나야말로 할 이야기는 아키 씨보다 없을지도 모른다, 그런 얘기들을 늘어놓다 말고 어물쩍 주위 둘러보다가&#183;&#183;&#183;) 어라, 집에 액자도 있네요.<br>같은 예술 계열이라 그런가, 저런 것도 좋아하시는 모양이에요&#183;&#183;&#183;?</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">(단정하게 웃는다. 미인계⋯?) 왜, 제가 좋아하는 게 츠유사키 씨일 수도 있죠.<br>팬을 좋아하지 않는 배우가 어디 있겠어요, 세상에⋯.<br>(자연스럽게 시선이 아이카와 같은 곳으로 향한다.) 종종 전시 같은 걸 보러 다녔거든요, 할 게 없을 때. 그림은 사람의 마음을 편안하게 만들어 주니까.<br>그런데 저건⋯⋯.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">그때, 휴대폰이 울리며 토코시에의 말이 끊깁니다.<br>그가 자리에서 일어섭니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">아, 죄송합니다. 잠시 전화를 좀⋯.<br>금방 올게요. 거실 구경하고 계세요.<br>저건 제가 좋아하는 그림이니까.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">그리고 전화를 받으며 안방으로 들어가는 토코시에.<br>갑자기 혼자가 되니 얼떨떨하긴 하지만, 최애의 집을 구경할 수 있는 기회가 쉽게 오는 건 아니니까요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;퍽이나. (배우라 그런가, 낯간지러운 말을 아무렇지도 않게 잘도 뱉네&#183;&#183;&#183;)<br>(애써 찬 손등으로 볼 꾹꾹, 누른다. 그리곤 풍경화 쪽으로 걸음 옮겨본다.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">아, 이 그림! 특유의 붓칠과 섬세한 묘사, 압도적인 표현력이 인상적입니다.<br>노을 지는 하늘을 배경으로 걷고 있는 사람의 뒷모습이군요.<br>&#39;영광의 자화상&#39;에 등장하는 화가의 대표작, &#39;태양과 시골길&#39;입니다.<br>원본은 일반적인 크기의 캔버스에 그려져 어느 박물관에 전시되어 있을 테니 모작이겠지만, 벽면을 적당히 채울 정도의 크기 또한 몰입감이 넘치네요.<br>이 화가의 그림을 좋아하는 걸까요?</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(이 화가의 그림을 좋아하는 건가&#183;&#183;&#183; 그럼 이따 다시 한 번 설득해볼 만도 한 것 같은데.)<br>(와중에 붓칠 예쁘다. 마음에 드는지 꽤 오랫동안 바라봤다가 책 쪽으로&#183;&#183;&#183;)</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">거실장 위에 놓여있는 몇 권의 책들.<br>하나같이 그림 또는 사진이 표지를 가득 채우고 있으며, 책보다는 사진집에 가깝습니다.<br>대부분의 페이지를 차지한, 단어가 아닌 것들.<br>제목이나 작가, 해설, 주석 따위는 페이지 한쪽 귀퉁이에 자그맣게 기재된 것이 전부입니다.<br>&#39;태양과 시골길&#39; 화가의 작품들을 엮은 사전만 한 두께의 양장본도 있네요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p001">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #f44336">✦</p>
+                    <p class="ccl_Utext">관찰 또는 지능 판정</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">CC&lt;=80 지능 (1D100&lt;=80) 보너스, 페널티 주사위[0] ＞ 28 ＞ 28 ＞ 어려운 성공</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">그러고 보니 과거 활동 당시 공개됐던 토코시에의 집 소개 영상에서는 분명 거실에 커다란 책장이 있었고, 빈칸 없이 빼곡한 대본과 온갖 책들, 노트 등으로 가득했었죠.<br>그런데 지금은 아무것도 없습니다.<br>책장이 있던 위치는 비어 있네요.<br>방으로 치워버린 걸까요?</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(그렇다고 남의 방에 들어가긴 뭐하고&#183;&#183;&#183;)<br>(이따 외간 여자 별로 안 무서우면 들어가 봐도 되냐고 물어보면 모를까. 거실장이나 보자.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">서랍 네 개로 구성된 거실장입니다.<br>여기까지 뒤적거려도 되는 거야? 라는 의문이 머리를 스치지만, 중요한 물건이 있다면 토코시에가 조심하라고 했겠거니 싶습니다.<br>⋯⋯아마도요!<br>서랍들 중 셋은 일상용품이, 마지막 서랍에는 공과금 고지서 따위가 차곡차곡 모아져 있습니다.<br>개중 아이카의 시선을 단숨에 사로잡는 노란색 편지지.<br>최근에 꺼내본 것인지 다른 종이들 위에 아무렇게나 반쯤 접혀 올라가 있네요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;응? (잠깐 고민한다.)<br>(도덕성을 지켜야 하나? 아니, 근데 연애 편지 같은 거면? 개인 사정이 결혼이면&#183;&#183;&#183;?!)<br>(그리 생각하니 궁금하다. 바로 열어본다.)<br>(그리고 내용이랑 눈마주친다.) &#183;&#183;&#183;&#183;&#183;&#183;.<br>(아키 씨에게 굉장히 죄송해졌다. 곧바로 편지 원래 있던 곳으로 돌려둔다.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">연기 활동을 중단하라고? 대체 이건⋯⋯.<br>그때 편지를 읽음과 동시에 토코시에가 전화를 마무리하는 소리가 들립니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p000">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0"> </p>
+                    <p class="ccl_Utext">&quot;네, 원장님. 다음 주에 뵙겠습니다. 건강하시고요⋯⋯.&quot;</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">아이카가 허둥지둥 편지지를 돌려놓고 서랍을 닫으며 일어선 동시에 안방의 문이 열립니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">아, 죄송해요. 통화가 조금 길어져서⋯.<br>그림 구경하고 계셨는지.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">등줄기를 타고 식은땀이 줄줄 흐르지만 일단은 모르는 척을 해야 합니다.<br>아이카는 프로 배우니까요! 할 수 있습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;. (뻔뻔하게 웃는다.) 손님 막 앉혀두고, 자리도 오래 비우시고&#183;&#183;&#183;.<br>연애라도 하시나?</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯⋯.<br>어떨 것 같으신지?</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;.<br>아키 씨 정도면 있을 거 같기도 하고~... (잠깐 곁눈질 한다. 진짜면 기분 이상할 거 같다.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯그건 빈말이라도 감사하네요.<br>없어요, 연인 같은 거. 한창 활동할 때는 그럴 틈도 없었고, 지금은⋯⋯.<br>10년 동안 은둔하는 배우도 좋다고 따라다니는 사람이 있으면 감사할 따름이지.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(끔뻑.)<br>10년 동안 은둔하는 배우도 좋다고 따라다니는 사람 지금 눈앞에 있는데요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">(덩달아 눈 깜빡깜빡.)<br>(방금의 발언으로 후배님의 취향이 좀 특이한가, 생각하게 되었다.)<br>⋯⋯뭐, 어쨌든.<br>거실 구경은 잘 하셨나요, ⋯라고 해도 조촐한 공간이라 볼만한 건 없지만.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(뭐지, 상당히 무례한 생각을 하는 것 같은데.)<br>아, 네. 근데 보아하니&#183;&#183;&#183;.<br>저 그림을 그린 화가, 되게 좋아하시는 모양이네요? (벽에 걸린 액자 가리킨다.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">아⋯⋯ 맞아요. 제가 가장 좋아하는 화가.<br>더군다나 저건 유작이니까.<br>햇빛을 받으면 분위기가 완전히 달라지는 작품⋯⋯. 해서, 특별 주문 제작했어요. 원본과 거의 똑같아요.<br>일부러 거실에 걸어두고 있죠. 여기가 가장 햇빛을 잘 받을 수 있는 자리라서.<br>그러고 보니, &#39;영광의 자화상&#39;이 이 화가의 생애를 각색한 내용이라고 하셨던가요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">잠깐, 지금 영화에 관심을 보여준 건가요?<br>예의상 하는 질문이라기에는 토코시에의 눈빛에 호기심이 어른거립니다.<br>이건 기회야!</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;아, 네! 화가의 생애를 각색한 거고, 데이비드 씨가 엄청 열심히 준비 중이라고 했어요.<br>(뜸, 잠깐 고민하다 바짝 들이민 채로 꽤 언성 높여 열심히 야기해본다.) 그리고&#183;&#183;&#183;! 데이비드 씨가 그랬어요. 아키 씨가 주인공 역을 맡지 못하면 역을 없애는 게 나은 수준이라고.<br>애당초 이 영화를 구상하면서 가장 먼저 떠올린 게 아키 씨라고 했는데&#183;&#183;&#183;&#183;&#183;&#183;.<br>&#183;&#183;&#183;처음엔 그정도인가 싶었는데, 아키 씨 집에 와 보니까 알 거 같아요! 맞는 말 같아!<br>좋아하는 화가고, 그럼 화가에 대해서 누구보다 열정적으로 몰입할 수 있는 건 아키 씨일 거고! 감독도 아키 씨가 아니면 안 된다고 하고!<br>(말하다 보니 숨찬다.) &#183;&#183;&#183;&#183;&#183;&#183;.<br>(숨 몇 번 다시 내쉬곤 어색하게 뒷목 쓸었다.) &#183;&#183;&#183;그리고, 저도 상대 역이 필요하다면 아키 씨였으면 좋겠고&#183;&#183;&#183;.<br>동경하는 배우랑 같이 연기할 수 있는 기회를 걷어찰 후회가 몇이나 되겠나요&#183;&#183;&#183;.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯. (조용히 듣고만 있었다. 가만 제 턱을 쓸다가⋯.)<br>⋯⋯숨 넘어가겠어요, 츠유사키 씨.<br>그럼⋯ 이건 어때요. 확답은 드릴 수 없지만, 부탁 하나만 들어주시면 출연도 진지하게 고려해 볼게요.<br>&#39;영광의 자화상&#39; 대본, 가져다 주실래요? 읽어보고 싶거든요.<br>윈저 감독님께도 같은 부탁을 했는데, 워낙 꼼꼼하시잖아요⋯. 마지막으로 뵈었을 때는 퇴고가 덜 끝났다고 거절하셔서.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;!<br>&#183;&#183;&#183;제가 감독님 들들 볶아서 가져올게요! 퇴고 안 끝났으면 일주일 내로 써오라고 할게요!<br>어, 그런데&#183;&#183;&#183;&#183;&#183;&#183;.<br>원고는 어디로 가져다 드리면 되나요? 지금처럼 아키 씨 집으로?<br>(절대 또 한 시간 내리 문전박대 당할까 봐 묻는 건 아니고.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯아, 그거 말인데.<br>잠깐 폰 좀 빌려주시겠어요? 번호 드릴 테니까.<br>⋯⋯또 내내 문앞에 세워둘 수는 없잖아요. (생활 습관을 고쳐야겠군, 그렇게 덧붙인 것도 같았다⋯.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;뭐지? 아키 씨, 10년 동안 독심술 같은 것도 배우셨나요&#183;&#183;&#183;?<br>(일단 폰 꺼내서 건넨다.) 그 생각한 건 어떻게 알았지&#183;&#183;&#183;.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">원래 그런 쪽으로 눈치가 좋은 편이라서. (꾹꾹 번호 찍는다.)<br>츠유사키 씨가 무슨 생각 중인지도 대강 알 수 있어요. 눈만 봐도.<br>(⋯⋯진담인가?)</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;.<br>그럼 제가 아키 씨 얼마나 좋아하는지도? 눈만 봐도?</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">(허리 굽혀 시선 맞춘다.)<br>오래도록 기다려 왔다, 고 하면 비웃으실 것 같으니까.<br>다시 카메라 앞에 설 수 있을 것 같아졌어요, 10년 만에.<br>이 정도면 나름대로 표현한 것 같은데.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(시야가 맞는다. 몇 번 깜빡.)<br>&#183;&#183;&#183;다른 사람이랑 착각하는 건 별로 원치 않는데. (음, 곁눈질&#183;&#183;&#183;)<br>(어색해진 분위기에 괜히 애꿎은 손등만 긁어댄다. 아까 봤던 협박 편지 때문에 카메라 앞에 못 선 건가, 근데 일개 장난 편지 아닌가? 그런 생각이 연신 떠돌다가&#183;&#183;&#183;)<br>(아, 맞다. 사람이 목전에 있지. 불현듯 정신 차린다.) &#183;&#183;&#183;&#183;&#183;&#183;.<br>제가 직설적으로 하는 표현이 아니면 잘 몰라서, 아직까진 잘 모르겠네요?<br>됐다. 이 주제는 대강 그러려니, 하고 넘기죠&#183;&#183;&#183;. (폰 다시 달라는 듯이 손 뻗는다.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">(오묘한 낯으로 웃기만 한다. 더 이상은 어떤 논리적인 설명도 덧붙이지 않고⋯.)<br>(휴대폰을 돌려준다.) 그런 게 있어요.<br>두고 보면 알겠죠⋯⋯.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">토코시에의 작품에 대한 안목은 당시에도 최고로 평가받았죠.<br>그런 그가 대본을 보고 싶다고 하다니, 확답은 아니지만 영화에 출연하는 것도 고려해 보겠다니요!<br>불가능할 줄 알았던 일이, 어쩌면 정말로 일어날지도 모릅니다.<br>잠시 후, 토코시에의 배웅을 받으며 길거리로 나온 아이카는 휴대폰을 꺼냅니다.<br>선명하게 저장되어있는 토코시에의 연락처.<br>이런 거, 항상 상상만 했는데⋯⋯.<br>바로 데이비드에게 연락해서 오늘의 수확을 전해줘도 좋을 것 같습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(연락처 빤히 보다가 다짐한다. 일 때문에 엮인 거니까 일 끝나면 지워드려야겠다&#183;&#183;&#183;.)<br>(그리곤 곧장 데이비드에게 전화 건다. 받나?)</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">뚜르르, 뚜르르⋯⋯.</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">여보세요, 츠유사키?</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">아, 데이비드 씨.<br>저, 출연을 진지하게 고려해보는 대신 부탁 하나를 받고 나왔는데요.<br>퇴고 다 하셨어요? 대본이 보고 싶으시다는데.</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">⋯⋯어, 뭐? 정말?! 대본만 갖다주면 된다고?<br>와, 다행이다. 사실 저번에는 시놉시스랑 설정집밖에 못 보여줬는데, 그래서 그런가⋯ 그렇게 긍정적인 분위기만은 아니었거든.<br>아키 씨 기분이 많이 안 좋아 보였어. 건강 문제 같았는데, 글쎄다⋯. 감기였나?<br>오늘은 어땠어?</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">건강 문제? (그런 기류는 아니었는데?)<br>으응, 전혀. 기분 안 좋다고 내쫓고 싶어 하는 기색도 아니었고&#183;&#183;&#183;.<br>뭐지, 오늘은 컨디션이 좋으셨나? 저번에 만났을 때 어땠는지는 제가 모르니까 달리 답을 드릴 수가 없네요&#183;&#183;&#183;.<br>말하는 것만 들어도 아시겠지만 오늘은 괜찮았어요. 집도 구경했고, 번호도 받았고.</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">그래? 알겠어. (분명 폰 너머로 고개를 갸우뚱하고 있을 것이다.)<br>근데 대본은 시간이 좀 더 필요해. 이게, 하⋯⋯.<br>마지막 장면에서 화가와 연인이 대화를 하는데, 그 부분만 몇 달째 썼다가 지우는 중이야. 아무리 신중하게 고민해도 자고 일어나서 보면 구리다니까.<br>내가 이것만 마무리하고 바로 보내줄게. 아키 씨한테 고맙다고 전해주고!</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">몇 마디 대화하는 부분이 그렇게 어려운가 싶다가도, 데이비드의 성격을 생각하면 다분히 말이 되는 상황입니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(이러니까 할리우드 내에서 손 꼽히는 거겠거니, 싶다. 폰 너머로 고개 끄덕인다.)<br>네에, 데이비드 씨도 수고가 많으시네요&#183;&#183;&#183; 퇴고되는 대로 연락 주시면 전해드릴게요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">어느새 태양이 정오를 향해 열심히 타오르고 있습니다.<br>돌아가는 발걸음이 어쩐지 가볍습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p005">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #f44336">03</p>
+                    <p class="ccl_Utext">High noon</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">토코시에를 만난 지도 어느덧 2주째.<br>남아 있던 꽃샘추위가 죄다 가시고 해가 뜨면 슬슬 정수리가 따가워질 무렵의 어느 날, 아이카는 토코시에로부터 한 통의 문자를 받습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">&#39;안녕하세요, 츠유사키 씨.&#39;<br>&#39;혹시 점심에 시간 되시면 같이 식사하실래요?&#39;<br>&#39;영화 관련해서 궁금한 것도 좀 있고 해서.&#39;</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">그날 이후로 다시 만난 적은 없지만, 토코시에와는 이렇게 문자를 주고받으며 생각보다 친해졌습니다.<br>하지만 점심을 먹자니요.<br>이거, 진지하게 데이트 신청 아닌가? 착각하면 안 되는데.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;. (한창 활동하실 때 여자들 좀 울려보셨겠는데.)<br>(헛된 기대는 안 한다. 당연한 말이지만 한 번 본 사람한테 누가 데이트 신청을&#183;&#183;&#183;)<br>(&#183;&#183;&#183;근데 기분은 좋네. 답장 쓴다.)<br>&#39;시간은 있고, 어디로 가면 되나요?&#39;</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">&#39;좋아요, 그럼 제 단골 식당으로 모실게요.&#39;</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">그리고 뒤이어 활짝 웃는 여우 이모티콘이 보내집니다.<br>⋯⋯맞나?</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;아하하! (끝내 웃고 만다. 아, 되게 본인 같은 이모티콘 쓰네&#183;&#183;&#183;.)<br>(그럼 이쪽은 웃으면서 제자리에서 뛰는 토끼 이모티콘 보내고 폰 도로 넣는다.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">그리고 얼마 후 도착한 토코시에의 단골 식당.<br>조용한 교외 골목길에 끼어있는 작은 가게에서 마음을 따뜻하게 진정시켜 주는 감자 수프 냄새가 새어나오고 있습니다.<br>문을 열고 들어가자, 세월의 흔적이 그대로 묻어나면서도 세련된 인테리어와 안락한 조명이 아이카를 맞이합니다.<br>토코시에는 저기에 있네요.<br>식당에서 가장 구석진 자리, 마주 앉을 수 있는 조촐한 테이블석입니다.<br>런치 타임인데 손님도 거의 없고, 단둘이 대화 나누기에 좋겠어요.<br>마침 문 열리는 소리를 듣고 아이카를 발견한 토코시에가 웃으며 손을 흔듭니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">안녕.<br>요즘 해만 뜨면 날씨가 너무 더워서요, 원⋯.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(넌지시 입꼬리만 올린 채로 다가간다.) 일찍 오셨네요?<br>요즘 날씨가 다 그렇죠, 뭐어. 한창 변덕일 때잖아요? 저러고 밤엔 또 쌀쌀하고.<br>주문은 하셨어요? 제가 좀 늦은 거 같은데&#183;&#183;&#183;.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">괜찮아요. 저도 방금 왔으니까.<br>더울 텐데, 무슨 음료 좋아하시는지⋯. 여기 과일 주스를 사장님이 직접 짜서 만드시는데, 정말 맛있거든요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">아이카는 토코시에가 건네주는 메뉴판을 펼칩니다.<br>으깬 감자 요리, 호밀빵과 치즈, 청어 절임, 완두콩과 햄 스튜, 팬케이크 등.<br>배가 고프지 않다면 커피나 과일주스, 비스킷으로도 충분할 거고요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(메뉴 살피다 말고&#183;&#183;&#183;) 배가 그렇게 고프지는 않아서&#183;&#183;&#183;.<br>추천해주신 거랑 팬케이크? 정도면 될 거 같은데.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">그럼 키위 주스랑⋯. 저도 빵과 스튜 정도로 괜찮을 것 같네요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">아이카가 메뉴를 고르면, 토코시에는 물컵을 내려놓는 사장님과 반갑게 인사하며 식사를 주문합니다.<br>그리고 정오의 햇살을 가리기 위해 창가 블라인드를 내린 후, 다시 아이카를 돌아봅니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">해서, 어떻게 지내셨는지⋯.<br>아, 윈저 감독님은 아직도 대본 때문에 고생 중이신가요?</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">며칠 전, 데이비드를 만났을 때 그가 창작의 고통을 호소하며 도저히 못하겠다고 우는 소리를 내던 기억이 납니다.<br>네가 못하면 대체 누가 하는데, 라고 그를 다그치던 케이시도요.<br>데이비드의 친구이자 &#39;영광의 자화상&#39; 음악 감독인 케이시 다우너.<br>데이비드가 대본을 완성하지 못하면 토코시에가 배역 제의를 거절할 것이고, 그러면 아이카도 너도, 다른 스태프와 투자자들도 전부 자신과 영화를 버리고 떠날 거라며 절규하자 케이시는 이렇게 말했습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p011">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">케이시</p>
+                    <p class="ccl_Utext">아, 네가 죄다 혼자 하려고 하니까 그런 거야!<br>아니, 마지막 대화 씬만 남았다며? 그 정도는 배우들 애드립에 맡기든가, 아니면 이 친구랑 그, 아키 씨한테 봐달라고 해.<br>연기는 쟤네가 하는데, 혹시 모르지. 더 좋은 대사가 나올 수도 있잖아?</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">그러자 데이비드가 마치 신의 계시를 받은, 혹은 벼락에 맞은 사람처럼 벌떡 일어섰습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">그거 정말 괜찮은 생각인데? 내가 왜 아키 씨랑 츠유사키를 두고 이 개고생을 하고 있는 거지?</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">케이시가 쏘아붙이더군요. 멍청한 놈.<br>어쨌든, 이 주제를 오늘 식사 자리에서 꺼내면 되겠어요.<br>대본도 출력해서 가져왔고요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">뭐랄까, 소개팅 애프터 때나 들을 법한 첫인사가&#183;&#183;&#183;. (농담 삼아 그리 말하곤 가방에서 출력해 온 대본 꺼내 올려둔다.)<br>고생을 하시긴 했는데요, 지금은 아니네요.<br>그 고생을 저희한테 떠넘기셔서&#183;&#183;&#183;&#183;&#183;&#183;.<br>한 번 읽어보실래요? 부족한 부분은 저희더러 알아서 채워보라던데.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">뭐⋯ 무언가를 진심으로 사랑하는 사람들은 으레 그런 법이죠.<br>한 번 꽂히면 다른 생각은 할 수도 없고. (대본을 받아들었다.)<br>나도 한때 그래봐서 알아⋯⋯.<br>⋯⋯좋아요, 잠시만요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">종이 뭉치를 받아드는 토코시에의 얼굴이 왜인지 하얗게 질려 있습니다.<br>괜찮은 척 연기조차 못하는 모습이 꽤나 불안해 보입니다.<br>손끝은 왜 저렇게 떨리고 있는지, 아이카는 덩달아 꼼짝도 하지 못합니다.<br>토코시에씩이나 되는 사람이 영화 대본 하나 읽는다고 저렇게 반응하는 이유가 뭘까요?<br>10년 동안 연기를 그만둔 후유증은 아닐까요?<br>식당 구석진 테이블 위를 무겁게 짓누르는 팽팽한 긴장감.<br>토코시에가 대본 표지, &#39;영광의 자화상&#39;이라는 제목만 떡하니 쓰여있는 페이지를 뚫어져라 쳐다보고 있습니다.<br>그리고 잠시 후, 마침내 첫 장을 넘깁니다.<br>동시에 크게 흔들리는 눈동자.</p>
+                </div>
+            </div>
+            <div class="ccl_player p001">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #f44336">✦</p>
+                    <p class="ccl_Utext">듣기 판정</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">CC&lt;=60 듣기 (1D100&lt;=60) 보너스, 페널티 주사위[0] ＞ 43 ＞ 43 ＞ 보통 성공</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯&#39;모진 운명이 그대를 핍박해도, 깊어지는 메마름에 지쳐가도, 끝까지 인내한다면 복을 얻을 것이요.&#39;<br>&#39;나는 여전히 서툴기만 한 것 같아서, 평생을 소모해도 너에게는 부족할까 봐.&#39;<br>⋯⋯&#39;너랑 나만 단둘이서.&#39;<br>⋯⋯ ⋯⋯⋯.<br>&#39;언제 헤어질 지 모르니 미리 작별 인사를 하자⋯⋯.&#39;<br>&#39;고마워, 사랑해.&#39;</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">사실 토코시에가 성의껏 대본을 읽고 있는 것은 아닙니다.<br>그는 한 번에 여러 장을 뭉텅이로 집어넘기며, 다소 미친 사람처럼 글을 탐독하고 있습니다.<br>토코시에의 연기 스타일과 캐릭터에 몰입하는 방식을 아는 아이카로서는 왜인지 감격스러우면서도 심장이 조여드는 오싹함을 느낍니다.<br>지금 그의 모습은 몇날며칠을 굶주렸던 사람이 허겁지겁 음식을 입으로 밀어넣는 것처럼, 그래요, 게걸스럽다는 표현이 딱 알맞습니다.<br>얼마나 기다렸을까요?<br>마침내 토코시에가 빈 구간, 데이비드가 끝내 채우지 못한 대화씬에서 손을 멈춥니다.<br>동시에 퍼뜩 정신을 차린 그가 눈가를 꾹꾹 누르며 고개를 듭니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯정말 마음에 들어요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">그래 보여요.<br>그렇게 빛나는 눈빛으로, 이제야 숨통이 트인다는 듯 울음 고여 붉어진 눈으로 나를 바라보면⋯⋯.<br>누구라도 당신이 기뻐한다는 사실을 알 수 있을 거예요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">어, 어&#183;&#183;&#183; 마음에 드신다니 다행이긴 한데&#183;&#183;&#183;. (울 정도로 감동적인 대본이었나? 급하게 옆에 있는 냅킨 몇 장 꺼내선 토코시에 손에 들려준다.)<br>&#183;&#183;&#183;그 정도로 마음에 드세요? 막 우실 정도로&#183;&#183;&#183;?</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">토코시에가 대본을 내려놓고 조심스럽게 당신의 손을 잡으며 말합니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">마음에 들고 말고요.<br>고마워요, 츠유사키 씨. 정말 진심으로. 저 이제⋯⋯.<br>드디어 대본이 읽혀요!</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">⋯⋯뭐라고요?</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">이제 말해도 좋을 것 같아요. 아니, 말해야 하는 것 같아요. 실은 10년 전에 연기를 그만뒀던 게⋯⋯.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">다시 심호흡. 그러다가 숨이 목구멍에 걸려 짧게 캑, 하고 튀어나온 다소 볼품없는 소리.<br>토코시에는 잔기침을 하면서도 떨림과 기대, 그 외 생경한 감정이 뒤섞인 눈으로 당신을 바라보고 있습니다.<br>아이카, 이어지는 말을 들을 준비가 되었나요?</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;에?<br>&#183;&#183;&#183;&#183;&#183;&#183;대본은 원래도 잘 읽으셨잖아요? 그러니까 배우를 하신 게&#183;&#183;&#183;&#183;&#183;&#183;? (의아하다. 여즉 잡혀는 있으나 상황을 이해하진 못했다.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯10년 전에, 앞으로 모든 연기 활동을 중단하라는 익명의 편지를 받았어요.<br>그런 뜬금없고 허무맹랑한 협박을 어떻게 믿겠어요? 무시하고 촬영하러 다녔는데, 어느 날부터인가 대본을 읽을 수가 없는 거예요.<br>그러니까⋯ 모든 문장이 해체된 채로 눈앞을 둥둥 떠다니는 것 같았어요. 자전거를 예로 들면 자, 전, 거 석 자가 각각 따로 인식되고, 눈을 감았다 뜨면 순서가 바뀌어서 전거자, 자거전처럼 말도 안 되는 단어로 보였다가⋯⋯.<br>⋯⋯한 단어가 아니라, 대본 속 수많은 문단과 대사가 전부 그렇게 뒤죽박죽 읽히니까 무섭기만 하더라고요.<br>헌데 그 전에 협박했던 사람이, 어떻게 이걸 알았는지 다시 편지를 보내왔어요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">그렇게 말하며, 토코시에가 품 속에서 곱게 접힌 종이를 하나 꺼내어 내밉니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">이거예요. 만약 당신이 오늘 대본을 가져오고, 그게 읽히면 보여주려고 들고 왔습니다⋯.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#39;당신을 시기질투하고 미워하는 원수가 있습니다. 10년 후 이 주소로 사람을 보내겠습니다&#183;&#183;&#183;?&#39; (소리내어 몇 번이고 편지를 덧읽었다. 의아하긴 마찬가지다.)<br>&#183;&#183;&#183;저기, 자의식과잉 같긴 한데요.<br>저번에 오래도록 기다려 왔다고 하신 거, 혹시 이거랑 관련된&#183;&#183;&#183;?</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">(눈앞의 남자는 정말로 맑게 웃고 있었다.)<br>무슨 소린지 이해가 안 되겠지만, 괜찮습니다. 저도 그래요. 제가 지금 무슨 말을 하고 싶은 건지 모르겠어요⋯.<br>저는 정말로 연기를 좋아했어요. 그런데 그걸 못하는 건 둘째치고, 신문도 책도 글이 많으니 읽을 수가 없고, TV에서는 영화나 드라마 이야기가 너무 많이 나오더라고요.<br>⋯⋯인기는 아무래도 좋았어요.<br>저는 그냥, 한 번만 더 카메라 앞에 서고 싶었어요.<br>그런데 그럴 수가 없어서⋯⋯.<br>⋯⋯그래서 웬만한 소식은 라디오나 가끔 만나는 지인들에게 들었고, 그림이랑 사진 구경하는 취미가 강제로 생겼어요. 적응이 빨라서 다행이라 해야 할지.<br>⋯⋯하여간에, 제 말은.<br>츠유사키 씨가 문을 두드렸던 그날이, 정확히 10년째 되는 날이었어요.<br>막상 정말로 아침부터 저를 부르는 소리를 들으니 정신이 아득해졌습니다. 도저히 꼼짝도 할 수가 없어서, 귀인을 1시간이나 밖에서 기다리게 해버렸는데⋯⋯.<br>아, 하하. 제가 거실 한가운데서 얼마나 멍청하게 서 있었는지 아세요?<br>⋯⋯갑작스럽게 미안해요, 츠유사키 씨. 하고 싶은 말만 두서 없이 늘어놔 버려서.<br>그래도 저는 줄곧 당신을 기다렸어요. 당신을 모르던 10년 전부터, 계속해서.<br>보고 싶었어요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(구구절절 부연 설명을 들어도 이해되지 않는 부분은 많다. 10년이라는 시간에 걸쳐 나타날 사람이 내가 아니라 다른 사람이었을 가능성도 있지 않나, 그런 생각에 영 웃지 못하다&#183;&#183;&#183;)<br>(거짓을 고하는 것 같진 않아서. 저도 모르게 선연하게 빛나는 주홍빛에 잠깐 시선을 뺏겼다.) &#183;&#183;&#183;&#183;&#183;&#183;.<br>무슨 말씀을 하시는 건지, 무슨 상황인지 전부 이해했다고 하는 건 거짓말이니까. 솔직히 어안이 벙벙하긴 한데요&#183;&#183;&#183;.<br>&#183;&#183;&#183;결론적으로, 어쨌든 제가 도움이 된 건 맞는 거죠?<br>우연인지 필연인지는 몰라도, 어쨌거나 제가 아키 씨에게 도움이 되었으니까&#183;&#183;&#183;&#183;&#183;&#183;.<br>&#183;&#183;&#183;그럼 저도 요구 하나 해도 되나? 같이 영화 출연해달라고?<br>보고 싶었으면 이정도는 해줄 수 있지 않아요? (막 피어나기 시작한 기대가 그득한 눈빛으로 본다. 빤히&#183;&#183;&#183;)</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">그런 말도 있지 않습니까. 반드시 일어날 일은 무슨 수를 써도 피할 수 없다고, 강렬한 불길과도 같아서 운명이라 부르기 마땅한 사건들이 일생에 한두 개쯤은 꼭 있기 마련이라고⋯⋯.<br>저는 운명 같은 건 안 믿었어요. 내 미래가 정해져 있다니, 그런 건 너무 불합리하잖아요.<br>그런데⋯⋯ 그런 괴현상을 겪고 나니까, 10년 뒤의 불확실한 구원을 간절히 기다리게 되더라고요.<br>의심은 기원이 되고, 기원은 믿음이, 확신이 되며, 그만큼이나 강한 의지는 물레를 돌아가게 만들어서⋯⋯.<br>(산 사람의 눈이 아찔할 만큼 선명하게 빛난다.) 운명 이야기는 좋아하시는지.<br>저는 좋아해요. 아주 많이.<br>(하필 대본을 가져온 사람이 당신인 것을 우연으로 치부하고 싶지 않다.) 그러니까⋯⋯.<br>확답을 하죠.<br>잘 부탁드립니다, 츠유사키 씨. &#39;오스카 글로우&#39;로서.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">글쎄요, 운명이라는 말은 제겐 너무 낯설어서. 정해진 미래가 있고, 그에 따라 순응하며 움직이는 이야기는 어쩐지 저와 먼 세상의 일처럼 느껴져서&#183;&#183;&#183;.<br>&#183;&#183;&#183;물론, 그럼에도 좋아해요. 아주 많이.<br>(광채를 마주한다. 나는 비록 당신이 기다린 세월을 하루아침에 전부 이해할 순 없으나.)<br>많이 부족할 거예요. 아키 씨에 비하면 저는 한낱 신인이나 다름 없고, 배우로서의 명성이나 인지도도 많이 부족한 편이니까.<br>아키 씨가 비워둔 공백이 있음에도 불구하고 저는 그걸 따라 잡을 그릇은 되지 못해서, 아직도 한참 뒤떨어져 있기 때문에&#183;&#183;&#183; 도중에 아키 씨의 발목을 붙잡을 수도 있지만.<br>그래도 기다리신 세월이 있으니, 그 기다림이 헛되지 않았다는 건 증명해드려야 마땅하겠죠&#183;&#183;&#183;.<br>(막연했던 기대가 조금씩 선명해진다. 나는 드디어 당신과 청명한 푸름을 동시에 담아낼 수 있다.) &#183;&#183;&#183;그러니까, 요지는!<br>저도 잘 부탁드려요, 아키 씨. &#39;아마벨 에버린&#39;으로서.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">엄청나게 동떨어진 개념은 아닐지도 몰라요. 인생을 일종의 연속극으로 본다면, 우리는 대본 속 등장인물일 테니까.<br>(종이 위에서 정해진 흐름을 따라 살아갈 뿐인 존재라고 일축하고 싶은 것이 아니다. 요지는, 우리는 한 차원 아래의 그들이 울고 웃으며 만들어 나가는 이야기를 이미 하나의 세계처럼 사랑하고 있다.)<br>(다음 생에도 연인으로 만나자고 일생을 바쳐 기약한 화가와 연인, 오스카와 아마벨, 그 이야기를 연기할 나와 당신.)<br>(단정한 얼굴 위로 누군가의 인생이 오버랩된다. 예술이 있는 삶은 이다지도 아름답다.)<br>아마벨은 오스카에게 헌신했고, 오스카는 아마벨을 의심의 여지 없이 사랑했죠.<br>⋯⋯츠유사키 씨는 제 팬이라고 하셨죠?<br>그러니까 당신이 자신감이 부족하다고 하거든 제가 당신의 화가로서 드릴 수 있는 말은 이것뿐이네요.<br>당신 덕분에 저는 비로소 대본도 세계도 다시 마주볼 수 있게 되었다고.<br>그러니까 총량이 한참 부족한 마음일지언정 전부 전해야만 한다면, 제가 아니고서야 누가 있겠어요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;오스카는 생애를 바쳐 사랑을 그려냈고, 아마벨은 그 사랑을 자신의 삶에 농축하여 오래토록 간직했더랬죠?<br>그러니 제가 당신의 연인으로서 드릴 수 있는 말은 이것뿐이네요.<br>당신이 저를 통해 다시 바라보게 된 세계를 제게 보여주세요.<br>당신이 오랫동안 바라보지 못했던 것들을. 당신이 사랑했고, 좋아했기에 다시 보고 싶었던 것들을 전부 한데 담아 제게도 알려주세요.<br>그렇게 해주신다면 저는, 당신이 제게 건네준 세계를 기억해보도록 할게요.<br>&#183;&#183;&#183;이렇게 하면 언젠가! 만일 아키 씨가 다시 대본을 보지 못하게 되는 날이 오더라도 제가 증명해드릴 수 있을 테니까. 그렇죠?<br>언젠가 당신이 다시 세계를 의심하게 되는 날이 오더라도 제가 증명해줄게요.<br>(당신이 사랑했던 세계는 분명히 존재했고, 당신은 이를 다시 바라볼 가치가 있다고. 웃으며 악수나 하자는 듯이 가볍게 손 내민다.)<br>&#183;&#183;&#183;&#183;&#183;&#183;아, 걱정하실까 봐 덧붙이는 건데.<br>반할 일은 없으니 걱정 마시고&#183;&#183;&#183;? (아마도.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">(내민 손을 맞잡는다. 원래도 선후배 관계에 있어서 딱히 권위를 내세우는 타입은 아니었으나 -그런 짓 귀찮으니까!- 대사 몇 마디 인용했다고 곧바로 기가 살아 받아치는 것이 꽤나 맹랑하고 야무진 배우구나 싶었다.)<br>⋯⋯좋은 일이지. (허공에서 손이 몇 번 단단하게 흔들린다.)<br>그래요, 모처럼인 김에 저도 한 마디 덧붙일게요.<br>10년 만에 절 구해줘서 고마워요.<br>이걸로 언젠가, 제가 당신을 동경으로 하여금 구제한 것은 갚은 셈 칠까요.<br>팬 말고, 배우와 배우⋯ 그리고 사람 대 사람으로서 다시 한 번, 잘 부탁하고⋯.<br>⋯⋯. (짧은 간극.)<br>두고 볼까요?<br>농~담⋯.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;.<br>&#183;&#183;&#183;&#183;&#183;&#183;두고 보긴 뭘 두고 봐요!<br>&#183;&#183;&#183;&#183;&#183;&#183;정신 바짝 차리고 임할 거니까 염려 마세요! (정신 안 차리면 진짜 큰일 날 거 같다.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">벼락처럼 깨달아진 유대감이 토코시에와 아이카를 운명 속으로 휘어잡는 순간이었습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p006">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #f44336">04</p>
+                    <p class="ccl_Utext">Then we&#39;ll be happy from afternoon</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">결국 그날은 식사고 뭐고 대화 삼매경에 빠져 늦은 밤이 될 때까지 자리를 지켰습니다.<br>가게 주인은 처음에 내준 음식이 손도 대지 않은 채 식은 것도, 두 손님이 추가 주문 없이 물만 리필하며 오후 내내 대화하는 것도 조용히 수용했습니다.<br>토코시에가 어지간히 대단한 단골이었나 봅니다.<br>오히려 문 닫을 시간까지 연장해가며 둘을 기다려줬습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">나중에 또 올까요. 저녁에는 바리스타가 출근하는데, 직접 내려주는 드립커피가 정말 괜찮거든요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;아, 그럴까요? 어차피 대본 익히려면 몇 번 더 만나야 하고.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">이후, 토코시에와 아이카는 2달에 걸쳐 수차례 만났습니다.<br>물론 프로답게 대본을 읽고 서로 합을 맞추며, 궁극적으로는 비어 있는 마지막 대화 씬을 채운다는 목적으로요.<br>그도 그럴 것이, 데이비드가 영화 촬영을 내년 봄부터 시작할 거라고 했거든요.<br>촬영을 위한 장소 섭외와 스태프 고용도 거의 다 완료되었지만, 각본이 완성되어야 구체적인 계획을 마무리할 수 있다더군요.<br>두 사람의 임무가 스타트를 끊는 셈입니다.<br>그리고 오늘도 마찬가지입니다.<br>아이카는 오후 3시경 공원에서 토코시에를 만났습니다.<br>간간이 사람들이 지나갔지만 애매한 시간대라서 그런지 대부분 벤치에 앉아 있는 둘을 신경도 쓰지 않았습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯당최 무슨 대사로 시작해야 할지 모르겠네.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">시작부터 분위기가 자못 심각합니다.<br>애당초 토코시에와 아이카는 첫 대사, 그러니까 스타트만 잘 끊는다면 완벽한 씬이 될 거라는 의견을 일치시켰습니다.<br>그런데 그 처음을 정하지 못하고 어느새 두 달째.<br>화가와 그의 연인에 대한 온갖 자료를 다 찾아다가 밤새 읽고 분석하고 연구해도, 아무리 그 이전 장면들을 내 것처럼 소화해도 이 씬에서만큼은 갑자기 캐릭터로부터 튕겨져 나가는 듯한 기분이 듭니다.<br>그러니 어떻게 억지로 몰입하겠어요.<br>토코시에가 한숨을 내쉬며 벤치 등받이에 몸을 늘어뜨립니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">(얼굴 위에 대본 뭉치를 터억 얹은 채 중얼거린다.) 오늘은 좋은 아이디어 있어?</p>
+                </div>
+            </div>
+            <div class="ccl_player p001">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #f44336">✦</p>
+                    <p class="ccl_Utext">행운 판정</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">CC&lt;=65 행운 (1D100&lt;=65) 보너스, 페널티 주사위[0] ＞ 50 ＞ 50 ＞ 보통 성공</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">문득 가방에 얌전히 들어 있는 책이 하나 떠오릅니다.<br>오늘 오전 내내 서점을 헤맨 끝에 찾아낸, 화가와 연인의 일화 모음집입니다.<br>뤼크 재단의 월간지 부록이라서 책보다는 팜플렛에 가까운 두께지만요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(흐음, 제 가방에 들어있던 책 꺼낸다.)<br>(이내 상대 얼굴 위에 얹어진 책 치우고선 챱, 얹어준다.)<br>여차하면 이거라도 읽어볼까? 오늘 서점에서 찾은 건데, 우리 이건 읽어본 적 없잖아.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">아. (갑작스럽게 빛이 눈을 찌르다가⋯ 말고 다시 책에 막힌다. 앓는 소리를 내며 아이카 쪽으로 고개를 돌린다.)<br>무슨 책인데? 이건.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">화가랑 연인의 일화 모음집? 책보단 팜플렛 같은 부류긴 해.<br>이런 것도 도움은 되겠거니&#183;&#183;&#183; 하고 챙겨온 건데, 비슷한 거 읽은 적 있으면 유감이고.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">흐음. (책 들고 요리조리⋯.)<br>(이내 펼친다. 가까이 오라는 듯 손 까딱까딱.) 같이 보게.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(옆에 바짝 붙는다. 흡사 기댄 꼴 비슷하게&#183;&#183;&#183;.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">부록에는 총 다섯 개의 일화가 소개되어 있습니다.<br>화가와 연인의 첫만남과 친구 시절의 에피소드 두어 개, 파리 전시회, 그리고 화가의 죽음을 앞두고 나눴던 대화.<br>개중 가장 인상적인 내용은 단연 마지막입니다.<br>죽음 앞에서 이별을 준비하는 연인들, 언제 찾아올지 모르는 마지막을 두려워하면서도 영원을 약속하고야 마는 한철 인간의 담대함.<br>그때 토코시에가 감을 잡은 듯 녹음을 시작합니다.<br>동시에 두 사람을 둘러싼 공기만 쿵, 하고 무거워지는 듯한 기분을 느낍니다.<br>근 2달간 조금이라도 아이디어가 생기면 이렇게 감정을 잡았죠.<br>우리만의 슬레이트인 셈입니다.<br>잠시 후, 토코시에가 먼저 입을 엽니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">&#39;만약 내가 죽는다면⋯⋯.&#39;<br>&#39;우리가 처음으로 함께 뤼크의 경치를 감상했던 그 언덕에 묻어줘.&#39;<br>나는 언제나 이방인이었어. 가족들에게도, 친구들에게도, 심지어는 시대와도 영 맞지 않아서 어딜 가나 삐걱거리기만 했는데. (눈동자에 누군가의 것과 같은 온기가 감돈다.)<br>기억해? 그 언덕에 올라갔을 때, 노을이 지고 있었던 거.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">동시에 시선이 마주칩니다.<br>아이카 역시 홀린 듯 입을 엽니다.<br>연기임을 잊고, 내가 그와 융화되어 내뱉는 말.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(한동안 아무 말 없이 바라본다. 누군가 건네었던 수많은 세계에 동화된 것 같은 기분에.) &#183;&#183;&#183;&#183;&#183;&#183;.<br>어찌 감히 기억하지 않을 수 있을까, 사랑하는 사람이랑 처음 만났을 때를 잊을 수 있는 사람이 과연 세상에 몇이나 현존할 수 있을까&#183;&#183;&#183;.<br>또한 네가 내게 건네준 것이니 기억하지 않을 리 만무하여&#183;&#183;&#183;. (느젓이 웃는다. 마주친 시선 사이로 일순 손을 겹쳐보였다.)<br>&#183;&#183;&#183;덕분에 나도 그 노을이 참으로 마음에 들었는데.<br>너도 마음에 들었던 모양이야? 오스카.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">해질녘, 들판, 내 세계에 가장 고요하게 불시착한 당신.<br>⋯⋯그때의 나는 외로웠던 것 같은데, 태양이 내뿜는 주황색 빛에 가려져서 그것의 그림자가 된 것 같다고 생각한 순간.<br>마음이 편해지더라고.<br>물체가 없으면 그림자는 존재할 수 없지만, 형태를 가진 채 존재하는 것 또한 그림자를 갖지 않을 수는 없지. 그림과 나는 그런 관계야. 서로의 그림자이자 존재를 증명하는 증거⋯⋯.<br>⋯⋯그리고, 또한 삶의 증거.<br>네가 날 비춘 덕분에 남길 수 있었던 나의 궤적.<br>아마벨, 삶을 소중히 여겨. 네가 내 삶이었으니까.<br>하늘만 올려다 봐도 네가 있으니, 내 일생은 온통 너인 거잖아⋯⋯.<br>(속삭이듯 덧붙인다. &#39;몇 번을 다시 죽고 또 살아나도 잊지 못할 내 사랑,&#39;)<br>언제 헤어질 지 모르니 미리 인사를 하자.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">고마워, 사랑해!</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;봄날, 꽃밭, 내 세계에 가장 오래도록 피어 있던 당신.<br>당신이 남긴 궤적마다 내가 있었던 것처럼, 나 또한.<br>오스카 네가 나를 비추었어. 그 빛 덕분에 내가, 내 삶을 사랑할 수 있게 되었어&#183;&#183;&#183;.<br>(내려앉은 마음에 어쩐지 애틋한 감정이 하나.) 나는 네가 죽고 나면 내 삶을 사랑할 수 없을 거라고, 네가 없는 삶을 살 바엔 죽는 게 낫다고 생각할 적이 있었는데.<br>나는 네가 건네준 마음을 기억해야 하고, 네가 내게 보여준 세상을 기억해야 하고, 네가 내게 가르쳐준 칠전팔기의 생존법을 영원히 상기해야 하는 입장이라.<br>그래야만 비로소 그 끝에 네가 남을 수 있어서.<br>네 삶을 증명하기 위해 나는 오늘을 살고, 내일을 영위하며&#183;&#183;&#183;.<br>네가 없는 삶 또한 사랑할 거야&#183;&#183;&#183;&#183;&#183;&#183;.<br>(속삭이듯 덧붙인다. &#39;나는 이제 네가 없어도 너를 사랑할 수 있을 것 같아.&#39;)<br>(&#39;그 사이로 네가 피어서&#183;&#183;&#183;&#183;&#183;&#183;.&#39;)<br>&#183;&#183;&#183;네가 남긴 삶의 증거가 될게.<br>네가 남긴 궤적을 따라 걷고, 그 끝에서 네게 모든 영광을 쥐여줄 테니까.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;나야말로 고마워, 사랑해!</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">노을빛이 온 세상을 뒤덮고 있습니다.<br>가슴을 꿰뚫는 바람에 호흡을 뺏겨 멍해진 그대로, 두 사람은 서로를 바라봅니다.<br>부록에는 없는 문장들이 서로의 마음을 가볍게 휘감고, 상대의 눈빛은 금방이라도 훅 꺼질 위태로운 촛불처럼 애틋합니다.<br>손이 떨리고, 목이 메이고, 본능적인 연기가 진심에 덧씌워지고.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">(연기라는 것은 비단 대사만으로 이루어지지 않는다. 하여 나는 어렵지 않게 알아챌 수 있다. 아마벨이, 당신이 나에게 하고 싶은 말을.)<br>(사계를 살아간 뒤, 언제라도 다시 만나자고⋯⋯.)<br>그런 네 운명을 사랑해.<br>그렇게나 당차고 사랑스러운 너를 정말 좋아해.<br>운명은 폐곡선을 그리며 돌고 도는 것이라, 내가 지금 죽는 것만큼은 바꿀 수 없겠지만⋯⋯.<br>나, 정말로 너와 평생을 살고 싶었어⋯⋯.<br>그러니 이른 작별에 한탄하는 대신 몇 번을 돌고 또 반복하면서, 평생 대신 영원한 찰나를.<br>아주 기쁘게 기다리면서⋯⋯.<br>살아갈 테니까.<br>다음 가을에도 날 알아봐 줘.<br>그때에는 다시 너랑 나 둘이서만 훌쩍 여행을 떠나자. 기대하고 있을게.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(아마벨의 입을 빌려 내어놓은 마음은 동시에 나 자신의 것이기도 했다. 믿지 않으려 했던 말애조차 이름을 붙이고 싶은 순간, 나는 이 감정을 당신에게서 한 번 느꼈고&#183;&#183;&#183;)<br>(이는 아마벨 또한 크게 다르지 않으리라 생각한다. 그리 확신할 수 있었다. 이유는 모른다, 불명이다&#183;&#183;&#183;.)<br>&#183;&#183;&#183;&#183;&#183;&#183;네가 내게 쥐여준 모든 것을 사랑해.<br>네가 보여준 세계도, 네가 사랑했던 예술도, 그 안에 남겨둔 네 흔적도.<br>무엇보다, 언제나 다정하게 내 편이 되어주었던 너를 정말 좋아해.<br>그래서 가능하다면 내 평생은 전부 네게 주고 싶었어&#183;&#183;&#183;&#183;&#183;&#183;.<br>네가 내게 삶을 건네주었으니까. 나도 내가 가진 삶을 네게 돌려주고 싶었어.<br>네가 남긴 것을 상기하는 것만으로는 부족할 만큼, 내 삶 자체를 네가 남긴 사랑에 대한 답으로 만들고 싶었어.<br>(어느덧 노을이 번진 하늘을 올려다본다. 평소와 다름 없던 풍경조차 지금은 당신이, 그리고 당신이 연기하는 배역이 남긴 세계의 일부처럼 느껴지기 짝이 없다.)<br>그러니 몇 번을 돌고 또 반복하면서, 평생을&#183;&#183;&#183;&#183;&#183;&#183;.<br>덧없는 기다림도 내겐 더할 나위 없는 축복이라 여기며 살아갈 테니까.<br>어느 때가 되었건 찾아 와. 알아봐 줄게.<br>가을이 아니더라도, 뜬금없는 봄자락에 찾아와도, 찰나를 스쳐도 한눈에 알아봐 줄 테니까&#183;&#183;&#183;&#183;&#183;&#183;.<br>다음 생의 나 또한 너를 사랑할 수 있도록, 그냥 나한테 와&#183;&#183;&#183;&#183;&#183;&#183;.<br>다시 만나면 꼭 말해줄게. 네가 내게 건네준 사랑은 단 한 번도 사라진 적 없었다고.<br>나는 그것들을 전부 기억하고, 아주 오래 사랑하며 살아왔다고&#183;&#183;&#183;&#183;&#183;&#183;.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">⋯⋯그와 동시에, 토코시에가 녹음 종료 버튼을 누릅니다.<br>환자처럼 깜빡이던 생기는 온데간데없이, 상기된 얼굴에는 순수한 기쁨뿐입니다.<br>노을빛의 눈동자가 아이카를 바라봅니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯괜찮은데? 아니, 괜찮은 정도가 아니라⋯⋯.<br>어때, 이 정도면 바로 감독님께 보내도 오케이 받을 수 있을 것 같은데.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;만족하려나? 원체 깐깐한 사람이라 통과 받을 수 있을지는 잘 모르겠지만&#183;&#183;&#183;&#183;&#183;&#183;.<br>일단 난 만족스러운 것 같은데, 한 번 보내볼까?</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">고개를 끄덕인 토코시에는 곧바로 데이비드에게 녹음 파일을 전송합니다.<br>새빨간 노을이 점점 지평선 아래로 가라앉고 있지만, 둘 중 누구도 자리에서 일어서지 않습니다.<br>자고로 현장에서 모든 것을 쏟아낸 배우에게 남는 것은⋯⋯.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯이 이상으로 오스카와 아마벨일 수는 없었으니까.<br>고마워, 네가 아니었다면 방금 같은 연기는 불가능했을 거야.<br>이런저런 사정을 털어놓긴 했지만⋯ 그냥 가볍게 받아들여도 돼. 나는 그냥⋯⋯.<br>다시 이런 감각을 느낄 수 있는 것만으로도 기쁜 것 같아.<br>⋯⋯그래도 역시 연예계 소식은 좀 전해 듣고 살 걸 그랬네. 이런 후배가 있는 줄 알았으면 나도 이르게 기뻐했을 텐데.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;.<br>(눈 깜빡, 조용히 손 뻗는다.)<br>(불현듯 상대 볼 한 번 잡았다. 손등으로 몇 번 문지르다가&#183;&#183;&#183;&#183;&#183;&#183;.)<br>(아, 탄식과 함께 다시 멀어진다.) 그건&#183;&#183;&#183;&#183;&#183;&#183;.<br>(잠깐 멈칫했다가 곁눈질 한다.) &#183;&#183;&#183;내가 오빠한테 할 말 아니던가?<br>따지고 보면 나는 선망하던 배우랑, 내 꿈의 목표가 되었던 사람이랑 둘도 없을 경험을 하는 셈인데.<br>그러니 기쁘다는 말은 내가 뱉어야 한다구.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">관계를 맺음에 있어서 꼭 한 사람만 기뻐야 하는 건 아니잖아.<br>각자의 입장에서 감사하면 된다고 생각해.<br>그리고⋯ 방금 한 말은 한 치의 과장도 없는 진심이니까.<br>내가 부던히 노력하고 모든 상황에 최선을 다한다고 해도, 세상이 언제나 마음처럼만 되진 않는 법인데. 너랑 합을 맞추고 있으면 어쩐지 그냥 연기하는 것보다 훨씬 마음이 편안해져서.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯운명이라는 게 진짜 있긴 한가 봐. (반쯤 농담조.)<br>그럼, 내 운명의 상대. 내년 봄부터는 내 &#39;연인&#39;으로서 잘 부탁해? ⋯⋯.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(운명, 연인, 어느 것 하나 쉽게 입에 올릴 수 있는 말이 없는데&#183;&#183;&#183;.)<br>(신기하리만치 당신의 목소리로 듣고 있자니 낯설지가 않다.)<br>&#183;&#183;&#183;그러게, 운명이라는 게 진짜 있긴 한가 봐?<br>수많은 사람 중에서 하필 내가 당신을 동경했고, 수많은 이야기 중에서 하필 당신이 그토록 좋아하던 대본을 들고 찾아왔고, 그 끝에서 이렇게 만났고.<br>이 정도면 운명이라고 불러도 괜찮은 것 같기도 하고&#183;&#183;&#183;.<br>(멋쩍게 뒷목 매만진다. 말하고 보니 상대 배역한테 할 말은 아닌가 싶기도 하고, 동시에 꼭 하고 싶었던 말이기도 하고&#183;&#183;&#183;)<br>(그러다 문득 시선이 겹친다.) &#183;&#183;&#183;&#183;&#183;&#183;난 내년 봄부터가 아니라 지금부터 잘 부탁해?</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">근데&#183;&#183;&#183;&#183;&#183;&#183;.<br>&#183;&#183;&#183;&#183;&#183;&#183;내년 봄 지나면 그땐 뭐야? 그냥 궁금해서&#183;&#183;&#183;&#183;&#183;&#183;.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯응? (팅⋯.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">(잠시 시선이 옆으로 굴러간다. 길지 않은 시간 동안 침음하는가 싶더니⋯.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯글쎄.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">그것도 두고 볼까?</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(마찬가지로 팅&#183;&#183;&#183;.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;!!</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">무슨 대답이 그래&#183;&#183;&#183;?!</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">(말끔한 얼굴로 모든 항의를 스루한다.) 늦기 전에 저녁 먹으러 갈까?<br>내가 살 테니까.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(불만 가득한 표정으로 볼 살짝 부풀렸다. 끄응&#183;&#183;&#183;.)<br>&#183;&#183;&#183;오빠 진짜 짜증나는 상인 거 알고 있지.<br>&#183;&#183;&#183;사는 것도 상관 없고, 저녁 먹는 것도 상관 없는데, 대신 나 손 잡아줘. 추워.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">그런데 누구는 그런 나도 오래 좋아했다고 해주니까.<br>(미지근한 온기가 아이카의 손 위를 덮는다.) 해가 질 때쯤 되니까 바람이 쌀쌀하네⋯.<br>가자.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;왜 과거형이야, 좋아하긴 앞으로도 좋아할 건데.<br>(온기에 괜스레 시선이 바닥으로 점차 내려간다&#183;&#183;&#183;) &#183;&#183;&#183;으응.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">토코시에와 아이카는 밤거리를 걸어 단골 식당으로 향합니다.<br>공원에서 식당은 조금 거리가 있지만, 그만큼 토코시에와 시시콜콜한 대화를 나누며 갈 수 있었습니다.<br>얼마나 걸었을까, 노란 가로등이 줄지은 거리를 걷다보니 익숙한 골목길이 펼쳐집니다.<br>5분만 걸어들어가면 식당이 나옵니다.<br>그때 맞은편에서 걸어오던 사람과 시선이 마주칩니다.<br>큼지막한 키, 날씨에 어울리지 않는 롱코트, 깊게 눌러쓴 모자.<br>걸친 것이 죄다 새까만 검은색입니다.<br>그가 좁은 길에서 아이카를 지나치다가 어깨를 스쳐 지갑과 흰색 장미를 떨어트립니다.<br>바쁜 길인지 물건을 떨군지도 모르고 급한 걸음으로 멀어지는군요.<br>⋯⋯흰색 장미?<br>아이카가 지갑과 장미를 주워주면, 검은 옷차림의 사람이 아, 하고 멈춰섭니다.<br>모자 챙과 그림자에 가려져 입술만 보이는 정도인데, 얇은 입술이 부드럽게 웃고 있습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p007">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #f44336">검은 옷차림의 행인</p>
+                    <p class="ccl_Utext">아, 감사합니다. 친구 장례식에 가는 길이었거든요.<br>그런데⋯⋯ 두 분. 아키 씨랑 츠유사키 씨 아니신가요?<br>오랜 팬이에요. 이런 곳에서 뵐 줄은.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;? (나는 그정도로 인지는 없을 건데.)<br>(자연스럽게 토코시에 본다.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">(속삭인다.) 스스로를 너무 과소평가하는 거 아니야?<br>팬이라잖아. (손등 툭툭.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(까치발 들고서 속삭인다.) 나보단 당연히 오빠 쪽 아닌가&#183;&#183;&#183;?<br>&#183;&#183;&#183;아니면 둘 다 같이? 우리 이름 둘 다 아는 거 같던데.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">(답하는 대신 한 걸음 앞장선다.)<br>감사해요. 몇 년 동안 얼굴도 비추지 않았는데, 기억해 주시고⋯⋯.<br>(빨리 오라는 듯 눈 깜빡.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(행동은 되게 빠르네. 느젓이 옆으로 총총&#183;&#183;&#183;)<br>저도요. 인지도는 그리 많은 편은 아닌데도 용케 알아봐 주셨네요&#183;&#183;&#183;&#183;&#183;&#183;.</p>
+                </div>
+            </div>
+            <div class="ccl_player p007">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #f44336">검은 옷차림의 행인</p>
+                    <p class="ccl_Utext">그럼요. 아키 씨는 이번에, 10년 만에 복귀하시는 거잖아요.<br>저도 그 영화 정말 기다렸는데, 오스카 역이라니. 기대돼요. 앞으로는 걱정 말고 오래오래 연기해 주세요⋯.<br>영화 개봉하면 꼭 보러 가겠습니다. 항상 응원해요, 두 분 다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">그는 마지막으로 모자를 잡고 까딱여 신사적으로 인사하고는 걸음을 돌려 어둠 속으로 사라집니다.<br>이런 곳에서 팬을 만날 줄이야.<br>조금은 얼떨떨한 기분으로 식당을 향해 걷던 중, 토코시에가 혼잣말처럼 중얼거립니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">아직 캐스팅 확정 기사는 안 나갔을 텐데, 엠바고라서⋯⋯.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">⋯⋯관계자겠죠?</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">그리고 이듬해 가을, &#39;영광의 자화상&#39; 촬영장.</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">컷!</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">데이비드가 활기찬 목소리로 외치며 벌떡 일어섭니다.<br>방금까지 촬영하던 장면은 토코시에와 아이카가 노을 지는 공원에서 완성한 영화 최후반부의 대화 씬.<br>다른 스태프들도 감탄하며 웅성거립니다.<br>연기력은 당연하거니와, 제법 호흡이 긴 테이크였음에도 불구하고 단번에 오케이 사인을 받아냈기 때문입니다.<br>아주 신이 난 데이비드가 두 사람에게 달려와 어깨를 두드립니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">오늘은 여기서 마무리합시다. 수고 많았어요.<br>두 사람 아니었으면 큰일 날 뻔했네. 분위기 너무 좋아요. 다음 촬영에서 남은 씬 찍으면 끝날 것 같아.<br>어떻게 이런 장면을 만든 거지? 나 참, 다시 생각해도 신기하네.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">왜겠어요. 좋아하는 일을 하다보면 그렇게 되는 거지.<br>아이카가 토코시에를 돌아보자, 그는 씩 웃으며 어깨를 으쓱입니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(괜히 시선 옆으로 돌린다.) &#183;&#183;&#183;&#183;&#183;&#183;.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">데이비드는 터질 듯한 광대를 내리지 못하고 으흐흥, 웃습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p008">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #9e9e9e">데이비드</p>
+                    <p class="ccl_Utext">촬영은 곧 끝날 거고, 개봉은 내년 말이니까 둘 다 시상식에서 상 하나씩은 받자고.<br>마지막까지 힘냅시다!</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">그렇게 으쌰으쌰 분위기를 띄운 데이비드가 스태프의 부름을 받고 떠나자, 토코시에가 조용히 웃으며 말합니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">상이라, 그러고 보니 안 받은 지도 꽤 됐네.<br>이 영화로 상을 받으면 그보다 좋은 일은 없겠지.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">지난 봄, 영화에 대한 기대로 한껏 부풀어 있던 사람들은 오스카 역에 토코시에가 캐스팅 되었다는 소식을 듣고 하나같이 경악했습니다.<br>무려 10년 만에 다시 스크린에 등장하는 아키 토코시에라니!<br>걱정과 우려, 의심도 있겠지만, 대부분은 신드롬에 휘말려 목이 빠져라 그를 기다리고 있습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">음⋯⋯, 아이카.<br>만약 내가 상을 받게 되면⋯⋯.<br>수상 소감에서 널 꼭 언급할래. 이 영광을 누구에게 돌린다, 그런 말들 흔히 하니까⋯.<br>장담할게.<br>나는 마지막으로 너에게 모든 영광을 돌려줄 거야.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(슴벅인다.) 나를?<br>가족이나 친구들 언급하는 쪽이 더 낫지 않아? 나한테 할애해도 되는 기회인가, 싶어서.<br>생에 몇 안 되는 기회일 건데&#183;&#183;&#183;&#183;&#183;&#183;. (물론 싫은 건 아닌데, 아니 되려 정정하자면 기쁘긴 한데.)<br>(&#183;&#183;&#183;내가 받아도 되는 애정의 형태인가? 다소 얼떨떨&#183;&#183;&#183;하다.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">너는 이상한 데서 걱정이 참 많아⋯⋯. (바람 빠지듯 웃는다.)<br>네가 내게 어떤 의미인지를 기억해. 10년 만에 봄바람이 어떤 소식을, 어떤 구원을 몰고 왔는지를.<br>널 과소평가하지 마.<br>뭐⋯ 수상하지 못하면 이것도 전부 설레발이 될 뿐이겠지만.<br>넌 날 믿잖아.<br>그러니 나도 그 믿음에 보답하는 거야.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">천하의 아키 토코시에가 상을 못 탈 생각을 하는 거야말로 괜한 걱정이 아니던가&#183;&#183;&#183;.<br>(잠시 말없이 바라본다. 과분하다는 생각은 여전히 남아있으나,)<br>(구태여 더 밀어내진 않는다. 당신이 건네는 마음을 받아들이는 것 또한 믿음에 응답하는 방법 중 하나일 테니.)<br>진짜 설레발은 이쪽이지. 말 나온 김에 나도 언젠가 오빠를 언급해야겠네?<br>시간이 차츰 지나면 작은 상이더라도 하나는 딸 수 있을 테니까, 그때는 내게 과분할 정도로 좋은 인연이었던 오빠를 언급하는 게 마땅한 거 같아서.<br>(한때 감히 닿을 수 있을까 싶었던 내 선망, 오래 바라보아 온 꿈.)<br>무엇보다 오빠는 모를 건데&#183;&#183;&#183;.<br>나, 아키 토코시에를 만난 이래로 웃는 일이 부쩍 많아진 편이라. (진심이다.)<br>그러니 그땐 내가 보답할게. 그 믿음에.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">나도 할 수 있어요. 내게도 상을 준다면, 무대 위에서 당신을 언급할 거예요.<br>당신에게 모든 영광을 돌려줄 거예요.<br>수많은 말들을 삼키고 미소로 화답합니다.<br>녹아내릴 것만 같은 이 감정을 꾸역꾸역 존경으로 정의하며, 한동안 못박힌 시선을 떼어낼 수 없었습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p000">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0"> </p>
+                    <p class="ccl_Utext">&quot;─남우주연상, 축하드립니다.&quot;<br>&quot;&#39;영광의 자화상&#39;, 오스카 역의 아키 토코시에!&quot;</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">시상자의 호명 직후, 우레와 같은 함성과 박수 소리가 식장 전체를 메웁니다.<br>카메라에 단독으로 잡힌 토코시에가 주변을 향해 인사하며 단상 위로 올라갑니다.<br>쉽사리 가라앉지 않는 흥분의 도가니 속, 토코시에가 시상자와 악수하고 트로피와 꽃다발을 받습니다.<br>어디선가 여러 명의 목소리가 외칩니다. 사랑해요!<br>사람들이 웃음을 터뜨립니다.<br>이윽고 토코시에가 큼큼, 하고 목을 가다듬으며 마이크 앞에 서자 웅성거리던 소리들이 점점 가라앉습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯오랜만이네요, 반갑습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">데뷔작에서 남우주연상을 수상했던 바로 그 시상식에서, 토코시에는 복귀작으로 다시 한 번 트로피를 들어올리고 있습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">지난 10년간, 연기뿐만 아니라 제 인생 전체에 대한 슬럼프를 겪었습니다. 대본을 읽고 감정을 이입하는 것이 한순간에 힘들어졌고, 연기가 곧 삶이라고 생각하며 살아왔던 제게는⋯ 최악의 시간이었죠.<br>그럼에도 저를 응원하고 기다려 주시는 분들을 가끔씩 마주치면, 어떻게든 다시 그 자리로 돌아가고 싶어졌습니다.<br>&#39;영광의 자화상&#39;에 등장하는 화가는, 제가 실제로도 정말 좋아하는 예술가입니다.<br>글을 읽기 힘드니 그림을 감상하는 취미가 생겼는데, 특히 &#39;태양과 시골길&#39;이라는 작품이 햇빛을 받을 때 달라지는 광경에 매료되었죠⋯.<br>비록 그의 일생은 다른 사람들이 보기에 비참해 보일지 몰라도, 저는 그가 생애 마지막 5년 동안 그의 연인과 보냈던 시간과 그로부터 비롯하는 희망과 기쁨에 집중하고 싶었습니다.<br>사망 직전에 완성했다는 유작에서 느껴지는 남다른 생명의 기운은, 사랑이 아니고서야 무엇을 근원으로 할 수 있겠느냐고⋯⋯.<br>저도, 저를 응원해 주신 모든 분들을 그렇게 사랑하고 싶습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">토코시에가 단정하게 웃으며 잠시 말을 멈춥니다.<br>커다란 스크린 속, 토코시에는 눈시울을 붉히며 눈을 감았다 뜹니다.<br>그간의 10년은 죽음보다 못한 삶이었고, 마침내 그는 새로운 삶을 얻었으며, 부활하여 다시금 세상 앞에 섰습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">⋯⋯감사합니다, 윈저 감독님. 오스카 역은 제가 아니면 안 된다고 고집을 부려주신 덕분입니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">그는 다른 스태프와 배우들의 이름도 하나하나 부르며 고맙다는 말을 잊지 않습니다.<br>그리고 마지막으로.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">아이카.<br>&#39;아마벨&#39;, 내 사랑.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">직후, 모두의 시선이 토코시에가 바라보는 방향으로 모입니다.<br>아이카의 얼굴이 대형 스크린에 토코시에와 함께 잡히고 있습니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">네가 아니었다면 나는 아직도 6피트 아래에 묻혀 있었을 거야. 밤낮으로 함께 영화를 두고서 고민하고, 포기하지 않고 격려해 준⋯ 내 최고의 파트너에게.<br>진심으로 고맙다는 말을, 아끼고 싶지 않으니까.<br>언젠가 약속했듯이.<br>이 모든 영광은 네 거야.</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">오직 당신에게만 그럴 자격이 있다는 듯, 토코시에가 아이카에게 트로피를 들어 보여줍니다.<br>뒤이어 사람들이 박수를 치며 환호합니다.<br>심장이 언제부터 이렇게까지 터질 듯 뛰고 있었는지 모르겠어요.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">받아주는 거지?</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;&#183;&#183;&#183;. (박수치다 말고 멈췄다. 벙찐다.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(그리곤 눈 데굴, 옆으로 잠깐 굴렸다가 도로 무대 위에 있을 이를 본다.)</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">(조용히 읊조리길.) 난 의미 불명인 건 별론데&#183;&#183;&#183;&#183;&#183;&#183;.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;받는 대신 이따 내려와서 다시 말해준다 약속하면?</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">토코시에는 말 대신 환한 웃음으로 화답합니다.<br>이윽고 그가 자신을 정면에서 촬영하고 있는 메인 카메라를 바라보며 말합니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">내일 아침에 뵙겠습니다, 감사합니다!</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">그의 말이 끝남과 동시에 자정의 종소리가 울립니다.<br>오랜 밤을 지나온 그를 위한 축포처럼, 사람들이 다시금 축하의 박수를 보냅니다.<br>그리고 그가 모든 영광을 아이카에게 돌렸으므로, 아이카는 무대에서 내려와 저를 향해 걸어오는 토코시에를 바라봅니다.<br>지척까지 다가온 그의 첫마디는 애틋함을 곱절로 더합니다.</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">우리는 오늘 아침에 볼까.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;오늘 아침도, 내일도, 그렇게 평생을?</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">허락해 준다면 다음 생까지도.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">하여간, 보기보다 욕심은 많으셔&#183;&#183;&#183;.</p>
+                </div>
+            </div>
+            <div class="ccl_player p010">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/n6VD6dIg95PXPfsB2MgJGpkdinw2/files/28b7ffe46e7f47bf222719499dad8fd79d7995116883198b345593b2cfd085de?t=1787240403772"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #ff9eb6">츠유사키 아이카</p>
+                    <p class="ccl_Utext">&#183;&#183;&#183;다 줄게, 다 가져. 전부 다 아키 토코시에 거 해!</p>
+                </div>
+            </div>
+            <div class="ccl_player p009">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"><img src="https://storage.ccfolia-cdn.net/users/1nhL01khOEe7tr8YjRlg5HppvGy2/files/e307d80091eb724f9f1a112ce1dce8d01d16aaf1794748931dac51c8d026141d?t=1787244984130"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #96424d">아키 토코시에</p>
+                    <p class="ccl_Utext">(어느샌가 손을 맞잡고서 손등에 가볍게 입을 맞춘다.)<br>사랑해!</p>
+                </div>
+            </div>
+            <div class="ccl_player p002">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0">⟡</p>
+                    <p class="ccl_Utext">아, 어떻게 아니라고 하겠어요!</p>
+                </div>
+            </div>
+            <div class="ccl_player p015">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #f44336">THE END</p>
+                    <p class="ccl_Utext">I&#39;ll see you tomorrow morning!</p>
+                </div>
+            </div>
+            <div class="ccl_player p013">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #f44336">CREDIT</p>
+                    <p class="ccl_Utext">아키 토코시에 생환<br>츠유사키 아이카 생환</p>
+                </div>
+            </div>
+            <div class="ccl_player p000">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #e0e0e0"> </p>
+                    <p class="ccl_Utext">이성 +&#39;태양과 시골길, 그리고 그림자의 연인&#39;에서 감소한 수치만큼 회복</p>
+                </div>
+            </div>
+            <div class="ccl_player p001">
+                <div class="ccl_infoWrap">
+                    <div class="ccl_imgWrap"></div>
+                </div>
+                <div class="ccl_textWrap">
+                    <p class="ccl_Uname" style="color: #f44336">✦</p>
+                    <p class="ccl_Utext">Thank you, see you tomorrow!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
